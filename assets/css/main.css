@@ -2,6 +2,7 @@
 
 :root {
   --color-primary: #FF52C1;
+  --color-button-hover: #FF8ED7;
   --color-body-text: #00252E;
   --color-white: #FFFFFF;
   --color-stats-label: #808E9A;
@@ -50,17 +51,13 @@ body {
   padding: 9px 30px;
   border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .header__button:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-.header__button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 82, 193, 0.5);
+  background-color: transparent;
+  color: var(--color-primary);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .hero {
@@ -91,20 +88,19 @@ body {
   font-family: 'Open Sans';
   font-size: 20px;
   font-weight: bold;
-  border: 1px solid var(--color-primary);
+  border: none;
   padding: 25px 99px;
   border-radius: 40px;
   margin-bottom: 120px;
   background-color: var(--color-primary);
   color: var(--color-white);
   box-shadow: 0px 6px 13px 0px #00252E39;
-  cursor: pointer;
   transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .hero__button:hover {
-  background-color: transparent;
-  color: var(--color-primary);
+  background-color: var(--color-button-hover);
 }
 
 .hero__image img {
@@ -252,7 +248,7 @@ body {
   font-weight: bold;
   line-height: 1.5em;
   padding: 25px 100px;
-  border: 1px solid var(--color-primary);
+  border: none;
   border-radius: 40px;
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -261,8 +257,7 @@ body {
 }
 
 .cta__button:hover {
-  background-color: transparent;
-  color: var(--color-primary);
+  background-color: var(--color-button-hover);
 }
 
 .footer {
@@ -341,28 +336,28 @@ body {
 
 input:focus {
   &::-webkit-input-placeholder {
-      color: transparent;
-      -webkit-transition: color 0.2s ease;
-      transition: color 0.2s ease;
-    }
-  
-    &:-moz-placeholder {
-      color: transparent;
-      -webkit-transition: color 0.2s ease;
-      transition: color 0.2s ease;
-    }
-  
-    &::-moz-placeholder {
-      color: transparent;
-      -webkit-transition: color 0.2s ease;
-      transition: color 0.2s ease;
-    }
-  
-    &:-ms-input-placeholder {
-      color: transparent;
-      -webkit-transition: color 0.2s ease;
-      transition: color 0.2s ease;
-    }
+    color: transparent;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+  }
+
+  &:-moz-placeholder {
+    color: transparent;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+  }
+
+  &::-moz-placeholder {
+    color: transparent;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+  }
+
+  &:-ms-input-placeholder {
+    color: transparent;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+  }
 }
 
 .footer__newsletter-button {
@@ -375,7 +370,12 @@ input:focus {
   border-radius: 5px;
   background-color: var(--color-primary);
   color: var(--color-white);
+  transition: background .4s ease, color 0.4s ease;
   cursor: pointer;
+}
+
+.footer__newsletter-button:hover {
+  background-color: var(--color-button-hover);
 }
 
 .footer__contacts {
