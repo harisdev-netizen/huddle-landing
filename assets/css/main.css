@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 20px;
+  /* padding-inline: 20px; */
 }
 
 .header__container {
@@ -62,7 +62,7 @@ body {
 
 .hero {
   text-align: center;
-  padding-inline: 20px;
+  /* padding-inline: 20px; */
 }
 
 .hero__title {
@@ -141,7 +141,7 @@ body {
   align-items: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 .features__item {
@@ -412,8 +412,50 @@ input:focus {
 }
 
 @media (max-width: 768px) {
-  .features__container {
+  .header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__logo-image {
+    width: 96px;
+  }
+
+  .header__button {
+    padding: 5px 17px;
+  }
+
+  .header__container {
+    margin: 24px auto 112px auto;
+    padding: 10px;
+  }
+
+  .hero {
+    margin: 0 39px 104px 40px;
+  }
+
+  .hero__title {
+    font-family: 'Poppins';
+    font-size: 24px;
+    max-width: 280px;
+    margin: 0 auto 24px auto;
+    line-height: 1.5em;
+  }
+
+  .hero__description {
+    max-width: 417px;
+  }
+
+  .stats {
     flex-direction: column;
+    margin: 0;
+    width: calc((100% -(90px*(1 - 1))) / 1);
+    }
+  }
+
+  .features__container {
+    flex-direction: column-reverse;
     gap: 20px;
   }
 
@@ -425,20 +467,18 @@ input:focus {
   }
 
   .features__item--reverse {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .features__title {
-    font-size: 28px;
+    font-size: 20px;
+    margin: 0 auto 16px auto;
   }
 
   .features__description {
     font-size: 14px;
+    margin: 0 auto;
     text-align: center;
-  }
-
-  .hero__title {
-    font-size: 32px;
   }
 
   .hero__button,
@@ -447,11 +487,23 @@ input:focus {
     font-size: 18px;
   }
 
+  .cta__title {
+    padding: 10px;
+  }
+
+  .footer {
+    margin: 0 auto;
+    padding: 0;
+  }
 
   .footer__container {
+    flex-direction: column-reverse;
+    /* align-items: center; */
+    padding: 109px 104px 46px 28px;
+  }
+
+  .footer__newsletter-form {
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
   }
 
   .footer__newsletter-input {
