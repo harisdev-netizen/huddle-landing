@@ -116,8 +116,16 @@ body {
 }
 
 .stats__item {
+  position: relative;
   text-align: center;
   margin: 0 20px;
+}
+
+.stats__icon {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 32px;
 }
 
 .stats__number {
